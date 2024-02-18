@@ -1,5 +1,7 @@
 import React from 'react';
-// import { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from 'styled-components';
+import { NavigationContainer } from '@react-navigation/native';
+import { theme } from './src/styles/theme';
 import {
     SafeAreaView,
     ScrollView,
@@ -14,6 +16,7 @@ import {
     Colors,
 } from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screens/HomeScreen';
+import AppNavigator from './src/navigation/AppNavigator';
 function App(): React.JSX.Element {
     const isDarkMode = useColorScheme() === 'dark';
 
@@ -22,15 +25,7 @@ function App(): React.JSX.Element {
     };
 
     return (
-        <SafeAreaView style={backgroundStyle}>
-            <StatusBar
-                barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-                backgroundColor={backgroundStyle.backgroundColor}
-            />
-            {/* <ThemeProvider theme={theme}> */}
-                <HomeScreen />
-            {/* </ThemeProvider> */}
-        </SafeAreaView>
+        <AppNavigator />
     );
 }
 

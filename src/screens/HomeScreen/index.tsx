@@ -19,7 +19,7 @@ export default function HomeScreen() {
     const onSubmit = (data: FormData) => {
         Keyboard.dismiss()
         setSendStatus(true)
-        setTimeout(function () {
+        setTimeout(() => {
             // Esperando 1 segundo simulando uma API de login
             setSendStatus(false)
             // Alert.alert('Form Data', JSON.stringify(data))

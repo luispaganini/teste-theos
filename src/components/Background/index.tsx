@@ -8,7 +8,7 @@ interface IBackgroundProps {
 
 export default function Background(props: IBackgroundProps) {
     return <BackgroundContainer>
-        <TitleApplication >{titleApplication}</TitleApplication>
+        <TitleApplication>{titleApplication}</TitleApplication>
             {props.children}
     </BackgroundContainer>;
 }

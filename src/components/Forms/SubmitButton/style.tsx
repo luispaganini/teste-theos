@@ -25,3 +25,7 @@ export const TextButton = styled.Text`
     font-weight: 700;
     text-align: center;
 `;
+
+export const ActivityIndicatorComponent = styled.ActivityIndicator`
+    padding-left: 10px;
+`;

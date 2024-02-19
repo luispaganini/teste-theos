@@ -10,10 +10,10 @@ export const TitleApplication = styled.Text`
     padding: 10px;
     padding-top: 20px;
     margin-bottom: 20px;
+    align-self: center;
 `;
 
 export const BackgroundContainer = styled.View`
     flex: 1;
     background-color: ${Color.Primary};
-    align-items: center;
 `;

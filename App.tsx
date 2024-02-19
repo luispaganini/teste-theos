@@ -17,15 +17,14 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import AppNavigator from './src/navigation/AppNavigator';
+import { AuthProvider } from './src/context/AuthContext';
 function App(): React.JSX.Element {
     const isDarkMode = useColorScheme() === 'dark';
 
-    const backgroundStyle = {
-        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    };
-
     return (
-        <AppNavigator />
+        <AuthProvider>
+            <AppNavigator />
+        </AuthProvider>
     );
 }
 

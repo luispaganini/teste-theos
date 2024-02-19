@@ -34,6 +34,7 @@ export const InputFormContainer = styled.TextInput<ITextInputProps>`
     padding: 10px 15px;
     width: 90%;
     font-size: 14px;
+    color: ${Color.Black};
 `;
 
 export const ErrorText = styled.Text`

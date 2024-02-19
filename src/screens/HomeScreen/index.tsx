@@ -1,11 +1,9 @@
-import { View, Text, ScrollView, TextInput, Button, Alert, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView } from 'react-native'
+import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 import React from 'react'
 import Background from '../../components/Background'
 import { useForm, Controller } from 'react-hook-form';
-import { FormContainer, InputsContainer } from './style';
-import Color from '../../enums/Color';
+import { FormContainer, InputsContainer } from './styles';
 import InputForm from '../../components/Forms/InputForm';
-import { titleApplication } from '../../../app.json'
 import SubmitButton from '../../components/Forms/SubmitButton';
 
 interface FormData {

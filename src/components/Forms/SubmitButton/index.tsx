@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { SendFormButton, TextButton } from './style'
+import { ActivityIndicatorComponent, SendFormButton, TextButton } from './style'
 import { ActivityIndicator } from 'react-native'
 import Color from '../../../enums/Color';
 
@@ -17,7 +17,7 @@ export default function SubmitButton(props: ISubmitButtonProps) {
                 {props.sendStatus ? props.textSendingButton : props.textButton}
             </TextButton>
             {props.sendStatus &&
-                <ActivityIndicator size={22} color={Color.White} animating={props.sendStatus} style={{ paddingLeft: 10 }} />
+                <ActivityIndicatorComponent size={22} color={Color.White} animating={props.sendStatus} />
             }
         </SendFormButton>
     )

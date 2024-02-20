@@ -1,4 +1,4 @@
-import { Keyboard, TouchableWithoutFeedback } from 'react-native'
+import { Alert, Keyboard, TouchableWithoutFeedback } from 'react-native'
 import React from 'react'
 import Background from '../../components/Background'
 import { useForm, Controller } from 'react-hook-form';
@@ -6,6 +6,7 @@ import { FormContainer, InputsContainer } from './styles';
 import InputForm from '../../components/Forms/InputForm';
 import SubmitButton from '../../components/Forms/SubmitButton';
 import { INavigationInterface } from '../../modules/INavigationInterface';
+import { useAuth } from '../../context/AuthContext';
 
 interface FormData {
     email: string;

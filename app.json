@@ -1,5 +1,6 @@
 {
   "name": "testeTheos",
-  "displayName": "testeTheos",
-  "titleApplication": "Star Wars Movies"
+  "displayName": "Teste Theos",
+  "titleApplication": "Star Wars Movies",
+  "urlApiSW": "https://swapi.dev/api/"
 }

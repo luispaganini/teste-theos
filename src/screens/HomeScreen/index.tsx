@@ -14,18 +14,19 @@ interface FormData {
 }
 
 export default function HomeScreen({ navigation }: INavigationInterface) {
+    const { login, isLoggedIn } = useAuth();
     const { control, handleSubmit, formState: { errors } } = useForm<FormData>();
     const [sendStatus, setSendStatus] = React.useState<boolean>(false)
-    const onSubmit = (data: FormData) => {
+
+    const onSubmit = async (data: FormData) => {
         Keyboard.dismiss()
         setSendStatus(true)
-        setTimeout(() => {
-            // Esperando 1 segundo simulando uma API de login
-            setSendStatus(false)
-            // Alert.alert('Form Data', JSON.stringify(data))
-            console.log(data)
-            navigation.navigate('DashboardList')
-        }, 1000);
+        try {
+            await login(data.email, data.password)
+        } catch (error) {
+            console.log(error)
+            Alert.alert('Erro', 'Erro ao tentar acessar a aplicação')
+        }
     };
 
     return (

@@ -10,14 +10,21 @@ import { useAuth } from '../context/AuthContext';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
+    const { isLoggedIn } = useAuth();
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="DashboardList" component={DashboardListScreen} options={{ headerShown: false }} />
-                <Stack.Screen name="DashboardDetail" component={DashboardDetailScreen} options={{ headerShown: false }} />
-
+                {!isLoggedIn ? (
+                    <>
+                        <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
+                        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+                    </>
+                ) : (
+                    <>
+                        <Stack.Screen name="DashboardList" component={DashboardListScreen} options={{ headerShown: false }} />
+                        <Stack.Screen name="DashboardDetail" component={DashboardDetailScreen} options={{ headerShown: false }} />
+                    </>
+                )}
             </Stack.Navigator>
         </NavigationContainer>
     );

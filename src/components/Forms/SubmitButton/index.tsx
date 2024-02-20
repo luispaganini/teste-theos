@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ActivityIndicatorComponent, SendFormButton, TextButton } from './style'
 import { ActivityIndicator } from 'react-native'
 import Color from '../../../enums/Color';

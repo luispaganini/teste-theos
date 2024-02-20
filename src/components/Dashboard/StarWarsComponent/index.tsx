@@ -1,8 +1,7 @@
-import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { AuthorNameText, Banner, Container, ContainerData, DetailsMovie, Title, YearText } from './styles'
 import { IMovieReducedInterface } from '../../../interfaces/IMovieReducedInterface'
-import { getImage, images } from '../../../utils/Banners'
+import { getImage } from '../../../utils/Banners'
 
 interface IStarWarsComponentProps {
     movie: IMovieReducedInterface

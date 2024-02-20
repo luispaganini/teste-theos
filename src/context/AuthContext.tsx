@@ -21,13 +21,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<IUserInterface | null>(null);
 
     const login = async (email: string, password: string) => {
-        try {
-            setUser({ email, password });
-            setIsLoggedIn(true);
-        } catch (error) {
-            //Tratar erro de um retorno API de login
-            console.log(error);
-        }
+        setUser({ email, password });
+        setIsLoggedIn(true);
     };
 
     const logout = () => {
